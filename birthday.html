@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Tushar ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fad0c4);
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.container{
+text-align:center;
+color:white;
+padding:30px;
+max-width:850px;
+z-index:2;
+}
+
+h1{
+font-size:55px;
+margin-bottom:15px;
+animation: glow 2s infinite;
+}
+
+h2{
+font-size:28px;
+margin-bottom:20px;
+}
+
+p{
+font-size:20px;
+line-height:1.8;
+}
+
+button{
+margin-top:35px;
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:40px;
+background:white;
+color:#ff4081;
+cursor:pointer;
+transition:.3s;
+font-weight:bold;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+#letter{
+display:none;
+margin-top:30px;
+background:rgba(255,255,255,.2);
+padding:25px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+animation:fade 1.2s;
+}
+
+.heart{
+position:absolute;
+font-size:25px;
+animation:float 8s linear infinite;
+opacity:.8;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+
+@keyframes glow{
+0%{text-shadow:0 0 10px white;}
+50%{text-shadow:0 0 30px white;}
+100%{text-shadow:0 0 10px white;}
+}
+
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎂 Happy Birthday ❤️</h1>
+
+<h2>Tushar Dubey</h2>
+
+<p>
+Every year, this day reminds me how lucky I am that you came into this world.
+</p>
+
+<button onclick="showLetter()">💌 Open My Heart</button>
+
+<div id="letter">
+
+<h2>My Dearest Tushar ❤️</h2>
+
+<p>
+Happy Birthday, My Love.
+<br><br>
+
+It's been 6 beautiful years together, and honestly, every single memory with you has become one of my favorite memories.
+
+Thank you for standing beside me through happiness, challenges, laughter, and dreams. You have always been my biggest comfort and my safest place.
+
+You make ordinary days feel special just by being with me.
+
+I still feel excited whenever I think about our future together, because if these six years have been so beautiful, I can only imagine how wonderful the years ahead will be.
+
+On your birthday, I don't just wish you success and happiness—I wish that life keeps giving us reasons to smile together.
+
+I hope we celebrate not only this birthday, but every birthday that comes after it, hand in hand.
+
+Thank you for loving me.
+
+Thank you for choosing me.
+
+And thank you for being YOU.
+
+I love you more than words can ever explain.
+
+❤️
+
+Forever Yours,
+<br>
+Shakti ❤️
+
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function showLetter(){
+document.getElementById("letter").style.display="block";
+}
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=(Math.random()*4+4)+"s";
+
+heart.style.fontSize=(Math.random()*20+15)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},8000);
+
+}
+
+setInterval(createHeart,250);
+
+</script>
+
+</body>
+</html>
